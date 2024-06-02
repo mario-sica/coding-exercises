@@ -1,0 +1,33 @@
+<!-- Un pulsante disabilitato
+Un input field di tipo number con una label con un intervallo da 0 a 100 e con step di 2. L'input field dovrà avere l'autofocus all'apertura della pagina
+Una checkbox con relativa label (la checkbox dovrà già essere selezionata)
+Un input field di tipo date. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lezione HTML</title>
+  </head>
+
+  <body>
+    <button disabled>Pulsante disabilitato</button>
+    <section>
+      <label for="input-number">Inserisci un numero pari da 0 a 100</label>
+      <input id="input-number" name="input-number" type="number" step="2" min="0" max="100" autofocus/>
+    </section>
+    <section>
+        <label for="checkbox">Togli la spunta se vuoi</label>
+        <input id="checkbox" name="checkbox" type="checkbox" checked>
+    </section>
+    <section>
+        <label for="select-date">Seleziona una data:</label>
+        <input id="select-date" name="select-date" type="date">
+    </section>
+  </body>
+</html>
