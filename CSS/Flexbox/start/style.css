@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+.lateral-bar {
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f0f0;
+}
+
+.logo-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#username {
+  margin-top: 10px;
+}
+
+.links-container {
+  margin-top: 60px;
+  flex: 1;
+}
+
+#links-list {
+  padding: 0px 10px;
+}
+
+.nav-links {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-bottom: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2b2b2b;
+  transition: color 0.3s;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  color: #2b2bb2;
+  background-color: rgb(238, 212, 66);
+  border-radius: 10px;
+}
