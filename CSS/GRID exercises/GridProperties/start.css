@@ -1,0 +1,32 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 165px 330px 165px; */
+  grid-template-rows: 1fr 2fr 1fr;
+  height: 100vh;
+}
+
+#green {
+  grid-column: span 3;
+}
+
+#yellow > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+#orange {
+  grid-row: 3;
+  grid-column: span 2;
+}
+
+#blue {
+  grid-row: span 2;
+}
+
+#red > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}

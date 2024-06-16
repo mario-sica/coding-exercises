@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Navbar Example</title>
+</head>
+<body>
+  <nav class="navbar">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon">
+      &#9776;
+    </label>
+    <ul class="nav-links">
+      <li><a id="home-btn" href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Link</a></li>
+      <li id="dropdown">
+        <a class="dropdown-btn" href="#">Dropdown</a>
+        <ul class="dropdown-content">
+          <div class="dropdown-menu">
+            <li class="list-items"><a href="#">Un'azione a caso</a></li>
+            <li class="list-items"><a href="#">Un'altra</a></li>
+            <li class="list-items"><a href="#">E poi boh</a></li>
+          </div>
+        </ul>
+      </li>
+      <li><a id="disabled-btn" href="#">Disabled</a></li>
+      <li class="search">
+        <form class="search-container" action="#" method="get">
+          <input id="search-text" type="text" placeholder="Search" />
+          <button id="search-btn" type="submit">Search</button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>
