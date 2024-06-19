@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOTR Card Viewer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #0c0c0c;
+        color: white;
+      }
+      .card {
+        background-color: rgb(23, 23, 23);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0px 0px 20px green;
+      }
+      .card img {
+        max-width: 100%;
+        min-width: 400px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        transition: 0.6s ease-in-out;
+      }
+
+      .card img:hover {
+        box-shadow: 0px 0px 10px red;
+        animation: pulse-shadow 2s infinite;
+      }
+
+      @keyframes pulse-shadow {
+        0%, 100% {
+          box-shadow: 0 0 5px red;
+        }
+        50% {
+          box-shadow: 0 0 20px red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Carta de "Il Signore degli Anelli"</h2>
+      <div class="card-content">
+        <h3 class="card-name"></h3>
+        <img class="card-image" src="" alt="Immagine del personaggio" />
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const cardNameElement = document.querySelector(".card-name");
+        const cardImageElement = document.querySelector(".card-image");
+
+        // Endpoint dell'API di RingsDB per tutte le carte
+        const apiUrl = "https://ringsdb.com/api/public/cards/";
+
+        try {
+          // Fetch dell'elenco delle carte disponibili
+          const response = await fetch(apiUrl);
+          const data = await response.json();
+
+          console.log(data); // Controlla i dati ricevuti nella console
+
+          // Seleziona casualmente una carta dall'array delle carte
+          const randomIndex = Math.floor(Math.random() * data.length);
+          const randomCard = data[randomIndex];
+
+          // Mostra il nome del personaggio
+          cardNameElement.textContent = randomCard.name;
+
+          // Mostra l'immagine del personaggio
+          if (randomCard.imagesrc) {
+            cardImageElement.src = `https://ringsdb.com/${randomCard.imagesrc}`;
+          } else {
+            cardImageElement.src = "assets/images/placeholder.jpg"; // Immagine di fallback
+            cardNameElement.textContent = "Il caldo ha squagliato i server, riprova dopo!"
+          }
+        } catch (error) {
+          console.error("Si è verificato un errore durante il fetch:", error);
+        }
+      });
+      document.get
+    </script>
+  </body>
+</html>
